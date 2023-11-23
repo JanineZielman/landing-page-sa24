@@ -1,0 +1,116 @@
+.template-single-artist {
+
+    .title {
+        padding-bottom: 2rem;
+    }
+
+    $blockMinHeight: 50rem;
+
+    .wrapper.community {
+        display: flex;
+        
+        align-items: flex-start;
+        flex-direction: column;
+    
+        position: relative;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 1rem;
+    
+        .image.community {
+            img {
+                
+                object-fit: cover;
+                @include desktop {
+                    width: 50vw;
+                }
+                
+                @include mobile {
+                    width: 100%;
+                    height: auto;    
+                }
+            }
+        }
+    
+        .community-block {
+            position: relative;
+            padding-bottom: 1rem;
+    
+            @include desktop {
+                left: 49vw;
+                //transform: translateX(-50%);
+                width: 48vw;
+            }
+    
+            @include mobile {
+                width: 100%;
+            }
+    
+            p, li {
+                @include desktop {
+                    font-size: 1.2rem;    
+                }
+    
+                @include mobile {
+                    font-size: 1.2rem;    
+                }
+                
+            }
+    
+            .caption {
+                p {
+                    font-size: 0.84rem;
+                }
+            }
+
+            img {
+                border-radius: 0.5rem;
+            }
+    
+            @include desktop {
+                &:first-child {
+                    position: absolute;
+                    left: 0.5rem;
+                    top: 0;
+                    transform: translateX(0);
+                    text-align: right;
+                    img {
+                        width: 100% !important;                  
+                        max-width: none !important;
+                        object-fit: cover;
+                        max-height: 40rem !important;
+                        min-height: 21rem !important;
+                        height: auto !important;
+                    }
+        
+                }
+            }
+
+            .text-block {
+                a {
+                    display: inline-block;
+                    @include more-button;
+                    margin-top: 1rem;
+
+                    &:link, &:visited {
+                        border-bottom: 0px solid black;
+                    }
+                }
+            }            
+            
+        }
+    }
+    
+    .text-block {
+        strong {
+            color: black;
+        }
+    }
+
+    .biennial-article {
+        @include desktop {
+            min-height: $blockMinHeight;
+        }
+        
+    }
+}
